@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+br {
+    visibility: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #a76bff;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: unset;
+    }
+}
+
+.feature {
+    background-color: #242429;
+    padding: 12px;
+    width: 50%;
+    height: 75px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+}
+
+.feature img {
+    height: 64px;
+    width: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.hide {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.feature:hover div.hide {
+    opacity: 1;
+}
+
+.feature:hover {
+    height: 200px;
+}
+
+.staffs {
+    display: flex;
+}
+
+.staff {
+    background-color: #242429;
+    padding: 12px;
+    width: 75%;
+    height: 75px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+}
+
+.staff img {
+    height: 64px;
+    width: 64px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.hide {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.staff:hover div.hide {
+    opacity: 1;
+}
+
+.staff:hover {
+    height: 200px;
+}
+
+.button-primary {
+    background-color: #8737ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-buttons {
+    display: flex;
+}
