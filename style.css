@@ -64,8 +64,8 @@ a {
 }
 
 .feature img {
-    height: 64px;
-    width: 64px;
+    height: auto;
+    max-width: 64px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -101,8 +101,8 @@ div.hide {
 }
 
 .staff img {
-    height: 64px;
-    width: 64px;
+    height: auto;
+    max-width: 64px;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -130,7 +130,7 @@ div.hide {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
@@ -144,7 +144,7 @@ div.hide {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
@@ -153,3 +153,9 @@ div.hide {
 .main-buttons {
     display: flex;
 }
+
+@media screen and (max-width: 800px) {
+    .staffs {
+        display: block;
+    }
+  }
