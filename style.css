@@ -43,13 +43,25 @@ a {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 1.5s;
+    transition: opacity 1.5s, filter 1.5s, transform 1.5s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+.staff.hidden.delay-200 {
+    transition: opacity 2s, filter 2s, transform 2s, height 0.5s;
+}
+
+.staff.hidden.delay-400 {
+    transition: opacity 2.5s, filter 2.5s, transform 2.5s, height 0.5s;
+}
+
+.staff.hidden.delay-600 {
+    transition: opacity 3s, filter 3s, transform 3s, height 0.5s;
 }
 
 @media(prefers-reduced-motion) {
@@ -72,6 +84,7 @@ a {
     margin-right: auto;
     display: block;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: height 0.5s;
 }
 
 .feature img {
@@ -102,13 +115,14 @@ div.hide {
 .staff {
     background-color: #242429;
     padding: 12px;
-    width: 75%;
+    width: 15%;
     height: 75px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: opacity 2s, filter 2s, transform 2s, height 0.5s, height 0.5s;
 }
 
 .staff img {
@@ -122,7 +136,7 @@ div.hide {
 
 div.hide {
     opacity: 0;
-    transition: 0.5s;
+    transition: opacity 0.5s;
 }
 
 .staff:hover div.hide {
@@ -130,7 +144,7 @@ div.hide {
 }
 
 .staff:hover {
-    height: 200px;
+    height: 225px;
 }
 
 .button-primary {
