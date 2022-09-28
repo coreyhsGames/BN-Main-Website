@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+:root {
+    --red: 229, 57, 53;
+    --orange: 251, 140, 0;
+    --yellow: 253, 216, 53;
+    --green: 67, 160, 71;
+    --blue: 30, 136, 229;
+    --purple: 167, 107, 255;
+
+    --theme-color: var(--purple);
+}
+
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,8 +35,8 @@ br {
 }
 
 a {
-	text-decoration: none;
-	color: #a76bff;
+    text-decoration: none;
+    color: rgb(var(--theme-color));
 }
 
 .hidden {
@@ -60,7 +71,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .feature img {
@@ -97,7 +108,7 @@ div.hide {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .staff img {
@@ -123,8 +134,7 @@ div.hide {
 }
 
 .button-primary {
-    background-color: #8737ff;
-    border: none;
+    background-color: rgb(var(--theme-color));
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -134,11 +144,11 @@ div.hide {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .button {
     background-color: #6c757d;
-    border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -148,6 +158,7 @@ div.hide {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .main-buttons {
@@ -158,4 +169,98 @@ div.hide {
     .staffs {
         display: block;
     }
-  }
+}
+
+.theme-picker {
+    background-color: rgba(50, 50, 50, 0.2);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.theme-picker.vertical {
+    flex-direction: column;
+    height: max-content;
+}
+
+input,
+label {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 1em;
+}
+
+#theme-picker-section {
+    justify-content: space-between;
+}
+
+#theme-picker-section>input {
+    height: 0.75rem;
+    width: 0.75rem;
+    margin: 0px;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+#theme-picker-section>input:before,
+#theme-picker-section>input:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: 2;
+}
+
+#theme-picker-section>input:after {
+    height: 104%;
+    width: 104%;
+}
+
+#theme-picker-section>input:before {
+    display: none;
+    height: 120%;
+    width: 120%;
+    border: 0.1rem solid white;
+}
+
+#theme-picker-section>input:not(:checked):hover:before,
+#theme-picker-section>input:not(:checked):active:before {
+    display: block;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#theme-picker-section>input:checked:before {
+    display: block;
+}
+
+#theme-picker-section>input[value="purple"]:after {
+    background-color: rgb(var(--purple));
+}
+
+#theme-picker-section>input[value="red"]:after {
+    background-color: rgb(var(--red));
+}
+
+#theme-picker-section>input[value="orange"]:after {
+    background-color: rgb(var(--orange));
+}
+
+#theme-picker-section>input[value="yellow"]:after {
+    background-color: rgb(var(--yellow));
+}
+
+#theme-picker-section>input[value="green"]:after {
+    background-color: rgb(var(--green));
+}
+
+#theme-picker-section>input[value="blue"]:after {
+    background-color: rgb(var(--blue));
+}
