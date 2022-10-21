@@ -131,11 +131,49 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section>
+        <h1 style="font-size: 3vw;">Statistics</h1>
+        <br>
+        <div class="hidden" style="display: flex;">
+            <div style="padding:25px">
+                <h2>Registered Users</h2>
+                <div class="count-num" value="431" style="font-size: 1.5vw; text-align: center;">0</div>
+            </div>
+            <div style="padding:25px">
+                <h2>Active Servers</h2>
+                <div class="count-num" value="51" style="font-size: 1.5vw; text-align: center;">0</div>
+            </div>
+            <div style="padding:25px">
+                <h2>Discord Members</h2>
+                <div class="count-num" value="350" style="font-size: 1.5vw; text-align: center;">0</div>
+            </div>
+        </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <a href="https://dash.basementnodes.xyz/">Ready to create your server?</a>
         <br><br>
         <p>Website made and maintained by <a href="https://github.com/coreyhsGames">coreyhsGames</a>.</p>
     </section>
+    <script>
+        const counters = document.querySelectorAll('.count-num');
+        const speed = 250;
+
+        counters.forEach(counter => {
+            const animate = () => {
+                const value = +counter.getAttribute('value');
+                const data = +counter.innerText;
+
+                const time = value / speed;
+                if (data < value) {
+                    counter.innerText = Math.ceil(data + time);
+                    setTimeout(animate, 1);
+                } else {
+                    counter.innerText = value;
+                }
+            }
+            animate();
+        });
+    </script>
 </body>
 
 </html>
