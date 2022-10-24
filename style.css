@@ -370,10 +370,10 @@ label {
 }
 
 div.openbtn {
-    font-size: 45px; 
-    cursor: pointer; 
-    position: fixed; 
-    color: rgb(var(--theme-color)); 
+    font-size: 45px;
+    cursor: pointer;
+    position: fixed;
+    color: rgb(var(--theme-color));
     padding: 10px;
     transition: 0.3s;
 }
@@ -384,4 +384,25 @@ div.openbtn:hover {
 
 a:hover {
     color: #f1f1f1;
+}
+
+.stat {
+    background-color: #242429;
+    padding: 12px;
+    width: 20%;
+    height: 150px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: opacity 1.5s, filter 1.5s, transform 1.5s, height 0.75s;
+}
+
+.stat.delay-200 {
+    transition: opacity 2s, filter 2s, transform 2s, height 0.75s;
+}
+
+.stat.delay-400 {
+    transition: opacity 2.5s, filter 2.5s, transform 2.5s, height 0.75s;
 }
