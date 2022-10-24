@@ -308,3 +308,11 @@ label {
 #theme-picker-section>input[value="blue"]:after {
     background-color: rgb(var(--blue));
 }
+
+.counter:after {
+    content: "+";
+}
+
+.stats h2 {
+    color: rgb(var(--theme-color));
+}
