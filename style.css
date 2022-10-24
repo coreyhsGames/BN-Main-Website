@@ -366,3 +366,16 @@ label {
     transition: margin-left .5s;
     padding: 16px;
 }
+
+div.openbtn {
+    font-size: 45px; 
+    cursor: pointer; 
+    position: fixed; 
+    color: rgb(var(--theme-color)); 
+    padding: 10px;
+    transition: 0.3s;
+}
+
+div.openbtn:hover {
+    color: #f1f1f1;
+}
