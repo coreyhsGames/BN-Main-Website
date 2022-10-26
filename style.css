@@ -80,6 +80,10 @@ p {
     font-size: 25px;
 }
 
+.sidenav a {
+    text-align: left;
+}
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
