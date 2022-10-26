@@ -60,14 +60,20 @@ a {
     text-decoration: none;
     color: rgb(var(--theme-color));
     transition: 0.3s;
+    text-align: center;
 }
 
 h1 {
     font-size: 35px;
+    text-align: center;
 }
 
 .main-h1 {
     font-size: 65px;
+}
+
+p {
+    text-align: center;
 }
 
 .hidden {
@@ -475,11 +481,11 @@ a:hover {
 
 @media screen and (max-width: 460px) {
     h1 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .link-primary {
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 
